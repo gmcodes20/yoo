@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;500&family=Raleway:wght@400;500;600;700;800&display=swap");
+
+$primary-color: #fff;
+$secondary-color: #5e0fc3;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100px;
+}
+
+.container {
+  width: 90%;
+  margin: 25px auto;
+  position: relative;
+  z-index: -1;
+}
+.logo {
+  font-family: "Encode Sans Semi Condensed", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: $secondary-color;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  // margin: 2rem 0 1rem;
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  background: $secondary-color;
+  color: #fff;
+  text-align: center;
+}
+
+.lg-heading {
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.md-heading {
+  font-size: 28px;
+  line-height: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.sm-heading {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
