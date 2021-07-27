@@ -20,8 +20,9 @@ header {
 }
 
 .container {
-  width: 90%;
-  margin: 25px auto;
+  width: 100%;
+  margin: 25px;
+  padding: 25px;
   position: relative;
   z-index: -1;
 }
@@ -51,7 +52,8 @@ a {
 }
 
 .lg-heading {
-  font-size: 36px;
+  width: 100%;
+  font-size: 32px;
   line-height: 42px;
   text-align: center;
   font-weight: 700;
@@ -235,6 +237,12 @@ a {
 
 @media screen and (min-width: 768px) {
   .lg-heading {
+    font-size: 38px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .lg-heading {
     font-size: 36px;
     line-height: 40px;
     text-align: center;
@@ -365,7 +373,7 @@ a {
 }
 
 .home__cta-images-bg {
-  width: 320px;
+  width: 300px;
   margin-left: 6rem;
   position: relative;
   right: 0;
@@ -373,7 +381,7 @@ a {
 }
 
 .home__cta-images-sm {
-  width: 220px;
+  width: 200px;
   position: relative;
   top: -5rem;
   left: 0;
@@ -463,7 +471,6 @@ a {
 }
 
 .sell {
-  width: 100%;
   padding: 0 43px;
   padding-bottom: 20px;
   margin-bottom: 0;
@@ -533,7 +540,6 @@ a {
 }
 
 .trusted {
-  width: 100%;
   padding: 43px;
   background: #e5e5e5;
   margin-top: 0;
@@ -625,7 +631,6 @@ a {
 }
 
 .cta {
-  width: 100%;
   padding: 43px;
   background: #9247f1;
   margin-top: 0;
@@ -671,7 +676,6 @@ a {
 }
 
 .footer {
-  width: 100%;
   background-color: #5e0fc3;
   color: #fff;
   padding: 43px;

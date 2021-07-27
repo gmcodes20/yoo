@@ -1,5 +1,13 @@
 @include media-md {
   .lg-heading {
+    font-size: 38px;
+  }
+  .container {
+  }
+}
+
+@include media-md {
+  .lg-heading {
     font-size: 36px;
     line-height: 40px;
     text-align: center;
