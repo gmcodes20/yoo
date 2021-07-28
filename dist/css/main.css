@@ -41,7 +41,9 @@ a {
 }
 
 .logo {
+  color: #5e0fc3;
   font-family: "Encode Sans Condensed", sans-serif;
+  font-weight: 500;
 }
 
 img {
@@ -322,10 +324,10 @@ input {
 
 .home__cta-images .h-line {
   position: absolute;
-  top: 13rem;
-  right: 20px;
+  top: 11rem;
+  right: 30px;
   height: 50px;
-  width: 150px;
+  width: 120px;
   border-top: 2px dotted #32b4fe;
   border-bottom: 2px dotted #32b4fe;
   border-width: 6px;
@@ -333,7 +335,7 @@ input {
 }
 
 .home__cta-images-bg {
-  width: 250px;
+  width: 220px;
   margin-left: 5.5rem;
 }
 
@@ -342,7 +344,7 @@ input {
 }
 
 .home__cta-images-sm {
-  width: 180px;
+  width: 150px;
   position: absolute;
   top: 8.5rem;
   left: 0;
@@ -358,7 +360,6 @@ input {
 }
 
 .ecom__cards {
-  padding: 0 1rem;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
 }
@@ -503,13 +504,16 @@ input {
 }
 
 .trusted__container {
-  padding: 30px;
+  margin-top: 0px;
+  margin-left: 15px;
+  padding-bottom: 60px;
+  margin-right: 15px;
       grid-template-areas: "a b c" "d d d" "e f g";
 }
 
 .trusted__container-image {
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
 }
 
 .trusted__container-image img {
