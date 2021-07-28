@@ -2,6 +2,7 @@
 
 $primary-color: #fff;
 $secondary-color: #5e0fc3;
+$alt-color: #32b4fe;
 
 * {
   padding: 0;
@@ -12,73 +13,113 @@ $secondary-color: #5e0fc3;
 body {
   font-family: "Raleway", sans-serif;
 }
-header {
+.header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  height: 100px;
+  height: 60px;
+  background-color: #fff;
+  box-shadow: -1px 0 4px hsla(45%, 64%, 15%, 0.15);
+  padding-top: 1rem;
 }
 
-.container {
-  width: 100%;
-  margin: 25px;
-  padding: 25px;
-  position: relative;
-  z-index: -1;
+.main {
+  overflow-x: hidden;
 }
-.logo {
-  font-family: "Encode Sans Semi Condensed", sans-serif;
-  font-size: 36px;
-  font-weight: 400;
-  color: $secondary-color;
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
 }
 
 ul {
   list-style: none;
 }
+
 a {
   text-decoration: none;
 }
 
-.btn {
-  display: inline-block;
-  // margin: 2rem 0 1rem;
-  padding: 0.8rem 1.5rem;
-  font-weight: 600;
-  background: $secondary-color;
-  color: #fff;
-  text-align: center;
+.logo {
+  font-family: "Encode Sans Condensed", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  // height: auto;
+}
+
+button,
+input {
+  border: none;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+
+.container {
+  max-width: 968px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
 }
 
 .lg-heading {
-  width: 100%;
-  font-size: 32px;
-  line-height: 42px;
-  text-align: center;
-  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 0.8rem;
 }
 
 .md-heading {
   font-size: 28px;
-  line-height: 30px;
-  text-align: center;
-  font-weight: 600;
+  margin-bottom: 2rem;
 }
 
 .sm-heading {
-  font-size: 20px;
-  line-height: 20px;
-  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 0.2rem;
 }
 
-@mixin media-sm {
-  @media screen and (max-width: 600px) {
-    @content;
+.section {
+  padding: 5rem 0 2rem;
+}
+
+@mixin botton($bg, $radius, $color) {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  color: $color;
+  background: $bg;
+  border-radius: $radius;
+  transition: 0.5s;
+  &:hover {
+    background: darken($bg, 5%);
+  }
+  &:active {
+    background: darken($bg, 30%);
   }
 }
-@mixin media-md {
-  @media screen and (min-width: 768px) {
-    @content;
-  }
+
+@mixin flex($col, $align, $justify) {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: $col;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+.sell-section {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }

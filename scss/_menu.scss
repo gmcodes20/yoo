@@ -1,13 +1,12 @@
 .navbar {
-  width: 100%;
+  // width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   position: relative;
-  background-color: #fff;
-  margin: 0;
-  padding: 23px 40px;
-  box-shadow: -1px 0 4px hsla(45%, 64%, 15%, 0.15);
+
+  margin-left: 1rem;
+  margin-right: 1rem;
 
   .menu-btn {
     position: relative;

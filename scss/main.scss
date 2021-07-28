@@ -3,321 +3,284 @@
 @import "./responsive";
 
 .home__cta {
-  margin-top: 150px;
-  display: grid;
-  justify-items: center;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  // position: relative;
+  z-index: -1;
 
   &-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
+    @include flex(column, center, center);
 
-    &-desc {
+    .home__cta-heading {
       text-align: center;
-      margin-top: 1rem;
     }
 
-    .btn {
-      border-radius: 25px;
+    .home__cta-btn {
+      @include botton($secondary-color, 25px, #fff);
     }
   }
 
   &-images {
     position: relative;
+    z-index: -1;
+    .v-line {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      height: 105px;
+      width: 50px;
+      border-left: 2px dotted $alt-color;
+      border-right: 2px dotted $alt-color;
+      border-width: 6px;
+      background: transparent;
+    }
 
+    .h-line {
+      position: absolute;
+      top: 13rem;
+      right: 20px;
+      height: 50px;
+      width: 150px;
+      border-top: 2px dotted $alt-color;
+      border-bottom: 2px dotted $alt-color;
+      border-width: 6px;
+      background: transparent;
+    }
     &-bg {
-      width: 300px;
-      margin-left: 6rem;
-      position: relative;
-      right: 0;
-      top: 0;
+      width: 280px;
+      margin-left: 5.5rem;
+      img {
+        border-radius: 20px;
+      }
     }
-
     &-sm {
-      width: 200px;
-      position: relative;
-      top: -5rem;
+      width: 180px;
+      position: absolute;
+      top: 8.5rem;
       left: 0;
-    }
-
-    img {
-      width: 100%;
-      border-radius: 20px;
+      img {
+        border-radius: 20px;
+      }
     }
   }
 }
 
 .ecom {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
   &-heading {
-    margin-bottom: 1.5rem;
+    text-align: center;
+    padding-top: 5rem;
   }
+
   &__cards {
-    display: grid;
     grid-template-columns: 1fr;
-    align-items: center;
-    gap: 10px;
 
     &-card {
-      max-width: 400px;
+      @include flex(column, flex-start, space-between);
+
+      a {
+        color: $alt-color;
+        &:hover {
+          color: darken($color: $alt-color, $amount: 10%);
+        }
+      }
     }
-    &-card-img {
-      width: 400px;
+
+    .extra {
+      position: relative;
+      z-index: -1;
+      margin-top: 4rem;
       img {
-        width: 100%;
-        border-radius: 10px;
+        border-radius: 15px;
+      }
+
+      .img2,
+      .img3,
+      .img4 {
+        width: 100px;
+        position: absolute;
+      }
+
+      .img1 {
+        margin-right: 40px;
+      }
+
+      .img2 {
+        left: 20px;
+        top: -40px;
+      }
+      .img3 {
+        right: 40px + 40px;
+        top: -80px;
+      }
+      .img4 {
+        right: 0;
+        bottom: 40%;
       }
     }
-
-    h3,
-    p,
-    a {
-      margin: 10px 0;
-    }
-    a {
-      display: inline-block;
-      color: #32b4fe;
-      margin-bottom: 60px;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-}
-
-.extra {
-  position: relative;
-
-  .img3,
-  .img2,
-  .img4 {
-    width: 150px;
-    position: absolute;
-  }
-  .img3 {
-    right: -10px;
-    bottom: 50%;
-  }
-
-  .img2 {
-    top: -20px;
-    left: 1rem;
-  }
-  .img4 {
-    top: -60px;
-    left: 65%;
   }
 }
 
 .sell {
-  padding: 0 43px;
-  padding-bottom: 20px;
-  margin-bottom: 0;
+  border-radius: 10px;
   background: $secondary-color;
   color: $primary-color;
-  position: relative;
-
+  margin-bottom: 0;
   &-row {
-    display: grid;
-    grid-template-columns: 1fr;
-
+    width: 70%;
+    margin: auto;
+    @include flex(column, flex-start, center);
+    gap: 3rem;
     &-col {
-      display: flex;
-      align-items: flex-start;
-      flex-direction: column;
+      // @include flex(row, center, center);
+      grid-template-columns: 1fr;
+      align-items: center;
       justify-content: center;
-      gap: 0.8rem;
-      position: relative;
 
-      & .img1 {
-        width: 350px;
-        position: relative;
-        top: -1rem;
+      .sm-heading {
+        margin-bottom: 0.5rem;
       }
 
-      & .img2 {
-        width: 350px;
-        padding-top: 50px;
+      .btn {
+        margin: 15px 0;
+        @include botton(green, 25px, #fff);
       }
-      &-heading,
-      p {
-        margin: 10px 0;
-      }
-
-      .sell-btn {
-        background: green;
-        border-radius: 20px;
-      }
-
-      &-img {
-        img {
-          width: 100%;
-        }
-      }
-
-      .sell-div {
-        display: flex;
-        flex-direction: column;
+      .img1 {
+        margin-top: -20px;
       }
     }
   }
 }
 
 .trusted {
-  padding: 43px;
+  position: relative;
+  z-index: -1;
   background: #e5e5e5;
-  margin-top: 0;
-  margin-bottom: 0;
+
+  &-heading {
+    text-align: center;
+  }
 
   &__container {
-    position: relative;
-    margin-top: 60px;
-    display: flex;
-    justify-content: space-between;
-
-    &-quote {
-      margin-top: 100px;
-      margin-bottom: 100px;
-      background: $primary-color;
-      padding: 15px;
-      position: relative;
-
-      ::before {
-        content: "❛❜";
-        position: absolute;
-        font-size: 160px;
-        color: #38363629;
-        top: -50px;
-        left: 50%;
-        transform: translate(-50%);
-      }
-    }
+    grid-template-areas:
+      "a b c"
+      "d d d"
+      "e f g";
 
     &-image {
-      position: absolute;
-      width: 70px;
-      height: 70px;
+      width: 90px;
+      height: 90px;
 
       img {
-        width: 100%;
-        height: 100%;
         border-radius: 50%;
       }
     }
 
     &-image:nth-child(1) {
-      // position: absolute;
-      left: 50%;
-      transform: translate(-50%);
-      top: -3rem;
-      transform: scale(0.8);
+      grid-area: a;
     }
     &-image:nth-child(2) {
-      transform: scale(1.5);
-      left: 0;
-      top: 0;
+      margin-top: -1rem;
+      grid-area: b;
     }
     &-image:nth-child(3) {
-      right: 0;
-      top: 0;
+      grid-area: c;
     }
-    &-image:nth-child(7) {
-      // position: absolute;
-      left: 50%;
-      transform: translate(-50%);
-      bottom: -3rem;
-      transform: scale(0.8);
+    &-quote {
+      grid-area: d;
+      padding: 10px;
+      margin: 10px;
+      background: $primary-color;
     }
+
     &-image:nth-child(5) {
-      transform: scale(1.5);
-      left: 0;
-      bottom: 0;
+      grid-area: e;
     }
     &-image:nth-child(6) {
-      right: 0;
-      bottom: 0;
+      position: relative;
+      grid-area: f;
+      bottom: -3rem;
+
+      // transform: scale(0.4);
+    }
+    &-image:nth-child(7) {
+      grid-area: g;
     }
   }
 }
 
 .cta {
-  padding: 43px;
-  background: lighten($secondary-color, 20%);
+  background: $secondary-color;
+  color: $primary-color;
+  padding: 20px;
   margin-top: 0;
-  margin-bottom: 0;
-
   &__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-    gap: 1rem;
-    color: $primary-color;
-
+    padding: 0;
+    margin: 0;
+    @include flex(column, center, center);
     &-text {
+      text-align: center;
       font-size: 24px;
-
       span {
-        color: #d1c5c5;
-
-        &.title {
-          font-family: "Encode Sans Semi Condensed", sans-serif;
-        }
+        color: #cabdbd;
       }
     }
     &-btn {
-      background-color: transparent;
-      border-radius: 30px;
-      border: 2px solid $primary-color;
-      width: 200px;
+      @include botton(transparent, 15px, $primary-color);
+      margin-top: 0.5rem;
+      border: 1px solid $primary-color;
+      text-align: center;
     }
   }
+  margin-bottom: 0;
 }
 
 .footer {
-  background-color: $secondary-color;
-  color: $primary-color;
-  padding: 43px;
-  margin-top: 0;
-  margin-bottom: 0;
-  &__container {
-    display: grid;
-    justify-items: start;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1.5rem;
+  padding-top: 0px;
+  margin-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 
-    &-list {
-      &-item {
-        &:first-child {
-          text-transform: capitalize;
-          margin-bottom: 1rem;
-          font-weight: 600;
-        }
-        a {
-          color: $primary-color;
-        }
-      }
+  background: lighten($color: $secondary-color, $amount: 10%);
+  &__container {
+    &-list li:first-child {
+      padding-bottom: 3px;
+      color: $primary-color;
+      font-weight: 600;
+      text-transform: capitalize;
     }
+    &-list a {
+      padding-top: 5px;
+      color: $primary-color;
+    }
+    grid-template-areas:
+      "a b"
+      "c b"
+      "d e";
+
+    .a {
+      grid-area: a;
+    }
+    .b {
+      grid-area: b;
+    }
+    .c {
+      grid-area: c;
+    }
+    .d {
+      grid-area: d;
+    }
+    .e {
+      grid-area: e;
+    }
+    padding: 30px 15px;
 
     .footer-social {
-      margin-top: 15px;
-      display: flex;
-      justify-content: space-between;
+      position: relative;
+      top: -2rem;
+      left: -2.4rem;
+      @include flex(column, center, center);
       a {
+        font-size: 24px;
         color: $primary-color;
-        font-size: 32px;
-        transition: 0.5s;
-        &:hover {
-          transform: scale(1.1);
-        }
       }
     }
   }
