@@ -46,7 +46,7 @@
       background: transparent;
     }
     &-bg {
-      width: 280px;
+      width: 250px;
       margin-left: 5.5rem;
       img {
         border-radius: 20px;
@@ -120,12 +120,14 @@
 }
 
 .sell {
-  border-radius: 10px;
+  img {
+    border-radius: 10px;
+  }
   background: $secondary-color;
   color: $primary-color;
-  margin-bottom: 0;
+  margin: 0;
   &-row {
-    width: 70%;
+    width: 90%;
     margin: auto;
     @include flex(column, flex-start, center);
     gap: 3rem;
@@ -241,6 +243,8 @@
 
   background: lighten($color: $secondary-color, $amount: 10%);
   &__container {
+    padding: 0;
+    margin: 0;
     &-list li:first-child {
       padding-bottom: 3px;
       color: $primary-color;
@@ -275,7 +279,7 @@
 
     .footer-social {
       position: relative;
-      top: -2rem;
+      top: -25px;
       left: -2.4rem;
       @include flex(column, center, center);
       a {

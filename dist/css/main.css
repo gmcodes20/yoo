@@ -65,8 +65,6 @@ input {
 
 .container {
   max-width: 968px;
-  margin-left: 1rem;
-  margin-right: 1rem;
 }
 
 .grid {
@@ -76,7 +74,7 @@ input {
 }
 
 .lg-heading {
-  font-size: 36px;
+  font-size: 32x;
   margin-bottom: 0.8rem;
 }
 
@@ -333,7 +331,7 @@ input {
 }
 
 .home__cta-images-bg {
-  width: 280px;
+  width: 250px;
   margin-left: 5.5rem;
 }
 
@@ -424,14 +422,17 @@ input {
 }
 
 .sell {
-  border-radius: 10px;
   background: #5e0fc3;
   color: #fff;
-  margin-bottom: 0;
+  margin: 0;
+}
+
+.sell img {
+  border-radius: 10px;
 }
 
 .sell-row {
-  width: 70%;
+  width: 90%;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -626,6 +627,8 @@ input {
 }
 
 .footer__container {
+  padding: 0;
+  margin: 0;
       grid-template-areas: "a b" "c b" "d e";
   padding: 30px 15px;
 }
@@ -675,7 +678,7 @@ input {
 
 .footer__container .footer-social {
   position: relative;
-  top: -2rem;
+  top: -25px;
   left: -2.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
