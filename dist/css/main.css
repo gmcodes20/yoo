@@ -65,6 +65,8 @@ input {
 
 .container {
   max-width: 968px;
+  padding-left: 1.5rem;
+  padding-right: 1rem;
 }
 
 .grid {
@@ -356,6 +358,7 @@ input {
 }
 
 .ecom__cards {
+  padding: 0 1rem;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
 }
@@ -500,6 +503,7 @@ input {
 }
 
 .trusted__container {
+  padding: 30px;
       grid-template-areas: "a b c" "d d d" "e f g";
 }
 

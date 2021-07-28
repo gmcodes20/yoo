@@ -71,6 +71,7 @@
   }
 
   &__cards {
+    padding: 0 1rem;
     grid-template-columns: 1fr;
 
     &-card {
@@ -162,6 +163,7 @@
   }
 
   &__container {
+    padding: 30px;
     grid-template-areas:
       "a b c"
       "d d d"
